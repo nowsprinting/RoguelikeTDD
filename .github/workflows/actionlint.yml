@@ -1,0 +1,31 @@
+# Copyright (c) 2023 Koji Hasegawa.
+# This software is released under the MIT License.
+
+name: Lint workflow files
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - .github/workflows/**
+  pull_request:
+    types: [ opened, synchronize, reopened ]  # Same as default
+    paths:
+      - .github/workflows/**
+
+jobs:
+  actionlint:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint workflow files
+        shell: bash
+        run: |
+          bash <(curl -LsS --retry 2 https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+          ./actionlint -color
