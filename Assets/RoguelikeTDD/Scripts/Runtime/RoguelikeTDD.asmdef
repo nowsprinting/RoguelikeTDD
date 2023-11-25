@@ -2,8 +2,9 @@
     "name": "RoguelikeTDD",
     "rootNamespace": "",
     "references": [
-        "GUID:8934fc5c443054b84b2b5017130854f4",
-        "GUID:c4cfa21e5bb994267860caf14f88abd4"
+        "TestHelper.Input",
+        "TestHelper.Random",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
