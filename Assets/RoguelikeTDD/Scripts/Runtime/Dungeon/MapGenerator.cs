@@ -5,12 +5,16 @@ namespace RoguelikeTDD.Dungeon
 {
     public class MapGenerator
     {
-        public int[][] GenerateMap(int width, int height)
+        public MapChip[][] GenerateMap(int width, int height)
         {
-            var map = new int[width][];
+            var map = new MapChip[width][];
             for (var x = 0; x < width; x++)
             {
-                map[x] = new int[height];
+                map[x] = new MapChip[height];
+                for (var y = 0; y < height; y++)
+                {
+                    map[x][y] = MapChip.Wall;
+                }
             }
 
             return map;
