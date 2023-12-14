@@ -24,7 +24,7 @@
       "url": "https://package.openupm.com"
     },
     "com.nowsprinting.test-helper.random": {
-      "version": "0.2.0",
+      "version": "0.3.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
