@@ -4,7 +4,8 @@
     "references": [
         "TestHelper.Input",
         "TestHelper.Random",
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "UniTask"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -7,7 +7,8 @@
         "RoguelikeTDD",
         "TestHelper",
         "TestHelper.Input",
-        "TestHelper.Random"
+        "TestHelper.Random",
+        "UniTask"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": "2.5.0",
     "com.nowsprinting.create-script-folders-with-tests": "1.2.1",
     "com.nowsprinting.test-helper": "0.4.2",
     "com.nowsprinting.test-helper.input": "1.0.0",
@@ -54,7 +55,8 @@
       "name": "package.openupm.com",
       "url": "https://package.openupm.com",
       "scopes": [
-        "com.nowsprinting"
+        "com.nowsprinting",
+        "com.cysharp"
       ]
     },
     {
