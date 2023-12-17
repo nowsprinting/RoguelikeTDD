@@ -39,5 +39,16 @@ namespace RoguelikeTDD.Dungeon
             var y = Random.Range(roomTop, roomBottom - height + 2);
             return new Room(x, y, width, height);
         }
+
+        public void WriteToMap(MapChip[][] map)
+        {
+            for (var y = Y; y <= Bottom; y++)
+            {
+                for (var x = X; x <= Right; x++)
+                {
+                    map[y][x] = MapChip.Room;
+                }
+            }
+        }
     }
 }
