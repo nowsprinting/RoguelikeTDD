@@ -7,7 +7,7 @@ using NUnit.Framework;
 namespace RoguelikeTDD.Dungeon
 {
     [TestFixture]
-    public class RoomTest
+    public partial class RoomTest
     {
         [TestCase(0, 0, 19, 9)]
         [TestCase(20, 10, 39, 19)]

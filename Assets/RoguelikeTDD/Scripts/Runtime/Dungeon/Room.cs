@@ -11,6 +11,9 @@ namespace RoguelikeTDD.Dungeon
         public int Y { get; private set; } // 部屋の左上のY座標
         public int Width { get; private set; } // 部屋の幅
         public int Height { get; private set; } // 部屋の高さ
+        public int Right => X + Width - 1; // 部屋の右端のX座標
+        public int Bottom => Y + Height - 1; // 部屋の下端のY座標
+        public (int x, int y) Center => (X + Width / 2, Y + Height / 2); // 部屋の中心座標
 
         public Room(int x, int y, int width, int height)
         {
