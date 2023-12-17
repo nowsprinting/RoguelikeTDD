@@ -50,5 +50,27 @@ namespace RoguelikeTDD.Dungeon
                 }
             }
         }
+
+        public static Room[] CreateRooms(int width, int height, int minRoomSize = 1, int padding = 0)
+        {
+            var rooms = new Room[9];
+            var roomWidth = width / 3;
+            var roomHeight = height / 3;
+            var roomIndex = 0;
+            for (var y = 0; y < 3; y++)
+            {
+                var top = y * roomHeight;
+                var bottom = top + roomHeight - 1;
+                for (var x = 0; x < 3; x++)
+                {
+                    var left = x * roomWidth;
+                    var right = left + roomWidth - 1;
+                    rooms[roomIndex] = CreateRoomInBounds(left, top, right, bottom, minRoomSize, padding);
+                    roomIndex++;
+                }
+            }
+
+            return rooms;
+        }
     }
 }
