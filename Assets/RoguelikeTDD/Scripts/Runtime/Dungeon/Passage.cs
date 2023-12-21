@@ -43,6 +43,19 @@ namespace RoguelikeTDD.Dungeon
             }
         }
 
+        public bool IsPointOnPassage(int x, int y)
+        {
+            foreach (var (px, py) in Steps)
+            {
+                if (px == x && py == y)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         // 3*3に配置されている部屋を外周順に並べて返す
         public static Room[] GetOuterPerimeter(Room[] rooms)
         {

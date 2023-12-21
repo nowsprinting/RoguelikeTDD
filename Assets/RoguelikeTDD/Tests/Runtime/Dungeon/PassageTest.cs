@@ -85,5 +85,37 @@ namespace RoguelikeTDD.Dungeon
             // Assert
             Assert.That(map.Map, Is.EqualTo(expected));
         }
+
+        [TestCase(1, 1)] // 始点
+        [TestCase(2, 1)] // 中間点
+        [TestCase(6, 4)] // 終点
+        public void IsPointOnPassage_通路上の座標_Trueを返す(int x, int y)
+        {
+            // Arrange
+            var from = new Room(x: 0, y: 0, width: 3, height: 3);
+            var to = new Room(x: 4, y: 2, width: 4, height: 4);
+            var passage = new Passage(from, to);
+
+            // Act
+            var actual = passage.IsPointOnPassage(x, y);
+
+            // Assert
+            Assert.That(actual, Is.True);
+        }
+
+        [TestCase(0, 0)] // 始点の左上
+        public void IsPointOnPassage_通路外の座標_Falseを返す(int x, int y)
+        {
+            // Arrange
+            var from = new Room(x: 0, y: 0, width: 3, height: 3);
+            var to = new Room(x: 4, y: 2, width: 4, height: 4);
+            var passage = new Passage(from, to);
+
+            // Act
+            var actual = passage.IsPointOnPassage(x, y);
+
+            // Assert
+            Assert.That(actual, Is.False);
+        }
     }
 }
