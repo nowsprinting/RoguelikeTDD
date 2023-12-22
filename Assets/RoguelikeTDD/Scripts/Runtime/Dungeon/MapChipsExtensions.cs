@@ -39,5 +39,41 @@ namespace RoguelikeTDD.Dungeon
                 }
             }
         }
+
+        public static (int x, int y) GetUpStairsPosition(this MapChip[][] map)
+        {
+            for (var y = 0; y < map.Length; y++)
+            {
+                var mapChips = map[y];
+                for (var x = 0; x < mapChips.Length; x++)
+                {
+                    var mapChip = mapChips[x];
+                    if (mapChip == MapChip.UpStairs)
+                    {
+                        return (x, y);
+                    }
+                }
+            }
+
+            return (-1, -1);
+        }
+
+        public static (int x, int y) GetDownStairsPosition(this MapChip[][] map)
+        {
+            for (var y = 0; y < map.Length; y++)
+            {
+                var mapChips = map[y];
+                for (var x = 0; x < mapChips.Length; x++)
+                {
+                    var mapChip = mapChips[x];
+                    if (mapChip == MapChip.DownStairs)
+                    {
+                        return (x, y);
+                    }
+                }
+            }
+
+            return (-1, -1);
+        }
     }
 }

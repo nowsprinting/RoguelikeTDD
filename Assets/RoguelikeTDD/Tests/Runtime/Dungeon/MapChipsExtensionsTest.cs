@@ -30,5 +30,31 @@ namespace RoguelikeTDD.Dungeon
             };
             map.Draw();
         }
+
+        [Test]
+        public void GetUpStairsPosition_登り階段の座標が返ること()
+        {
+            var map = new[]
+            {
+                new[] { MapChip.Wall, MapChip.Room, MapChip.Passage },
+                new[] { MapChip.Door, MapChip.UpStairs, MapChip.DownStairs },
+            };
+            var (x, y) = map.GetUpStairsPosition();
+            Assert.That(x, Is.EqualTo(1));
+            Assert.That(y, Is.EqualTo(1));
+        }
+
+        [Test]
+        public void GetDownStairsPosition_降り階段の座標が返ること()
+        {
+            var map = new[]
+            {
+                new[] { MapChip.Wall, MapChip.Room, MapChip.Passage },
+                new[] { MapChip.Door, MapChip.UpStairs, MapChip.DownStairs },
+            };
+            var (x, y) = map.GetDownStairsPosition();
+            Assert.That(x, Is.EqualTo(2));
+            Assert.That(y, Is.EqualTo(1));
+        }
     }
 }

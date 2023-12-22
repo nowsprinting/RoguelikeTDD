@@ -7,7 +7,7 @@ using RoguelikeTDD.TestUtils;
 
 namespace RoguelikeTDD.Dungeon
 {
-    public class MapGeneratorTest
+    public partial class MapGeneratorTest
     {
         [TestCase(20, 10)]
         [TestCase(30, 20)]
