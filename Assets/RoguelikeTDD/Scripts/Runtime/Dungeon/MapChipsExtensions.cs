@@ -27,6 +27,11 @@ namespace RoguelikeTDD.Dungeon
             }
         }
 
+        public static bool CanMove(this MapChip mapChip)
+        {
+            return mapChip != MapChip.Wall;
+        }
+
         public static void Draw(this MapChip[][] map, GameObject parent = null)
         {
             for (var y = 0; y < map.Length; y++)

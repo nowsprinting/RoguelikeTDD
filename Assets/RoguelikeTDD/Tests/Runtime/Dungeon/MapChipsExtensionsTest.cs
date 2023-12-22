@@ -31,6 +31,18 @@ namespace RoguelikeTDD.Dungeon
             map.Draw();
         }
 
+        [TestCase(MapChip.Wall, false)]
+        [TestCase(MapChip.Room, true)]
+        [TestCase(MapChip.Passage, true)]
+        [TestCase(MapChip.Door, true)]
+        [TestCase(MapChip.UpStairs, true)]
+        [TestCase(MapChip.DownStairs, true)]
+        public void CanMove_移動可能なMapChipにはTrueが返ること(MapChip mapChip, bool expected)
+        {
+            var actual = mapChip.CanMove();
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+
         [Test]
         public void GetUpStairsPosition_登り階段の座標が返ること()
         {
