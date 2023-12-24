@@ -2,6 +2,7 @@
 
 [![Meta file check](https://github.com/nowsprinting/RoguelikeTDD/actions/workflows/metacheck.yml/badge.svg)](https://github.com/nowsprinting/RoguelikeTDD/actions/workflows/metacheck.yml)
 [![Test](https://github.com/nowsprinting/RoguelikeTDD/actions/workflows/test.yml/badge.svg)](https://github.com/nowsprinting/RoguelikeTDD/actions/workflows/test.yml)
+[![Deploy to GitHub Pages](https://github.com/nowsprinting/RoguelikeTDD/actions/workflows/deploy.yml/badge.svg)](https://github.com/nowsprinting/RoguelikeTDD/actions/workflows/deploy.yml)
 
 
 
@@ -16,7 +17,16 @@
 ## 注意事項
 
 - TextMesh Pro Essentialsをトラッキングから外しているので、最初に再生するときにインポートを促すウィンドウが出ます。それに従ってインストールしてください
-- プロダクトコードは、Copilotからの提案をできるだけ残しています（あえてリファクタリングもコメント追加もしていません）
+- プロダクトコードは、Copilotからの提案をできるだけ残しています（あえてリファクタリングしていません）
+- タグ `chapXX` は、各章終了時点のコミットを指しています
+
+
+
+## ゲームプレイ
+
+### キーボード
+
+- **HJKLYUBN**キー：移動
 
 
 
@@ -35,12 +45,27 @@ Assets
     ├── Scripts
     │   ├── Editor
     │   └── Runtime         プロダクトコード（ゲーム本体側のコード）
-    │       └── Dungeon     主に第4章「ダンジョンの自動生成」のプロダクトコード
+    │       ├── Dungeon     主に第4章「ダンジョンの自動生成」のプロダクトコード
+    │       └── Hero        主に第5章「プレイヤーキャラクター」のプロダクトコード
     └── Tests
         ├── Editor
         └── Runtime         テストコード
             ├── Dungeon     主に第4章「ダンジョンの自動生成」のテストコード
+            ├── Hero        主に第5章「プレイヤーキャラクター」のテストコード
+            ├── TestDoubles テストダブル
             └── TestUtils   テストに使用する補助的なクラスなど
+```
+
+
+### 状態遷移図
+
+```mermaid
+stateDiagram-v2
+    direction LR
+
+    [*] --> HeroIdol
+    HeroIdol --> HeroDoing
+    HeroDoing --> HeroIdol
 ```
 
 
