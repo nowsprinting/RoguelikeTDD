@@ -10,19 +10,15 @@
 
 このリポジトリは、同人誌『GitHub CopilotとのペアプロTDDでつくるローグライクRPG』のサンプルコードです。
 
-ゲームの最新ビルドは [https://nowsprinting.github.io/RoguelikeTDD/](https://nowsprinting.github.io/RoguelikeTDD/) でプレイできます。
+書籍は次のWebサイトで購入できます。
 
-
-
-## 注意事項
-
-- TextMesh Pro Essentialsをトラッキングから外しているので、最初に再生するときにインポートを促すウィンドウが出ます。それに従ってインストールしてください
-- プロダクトコードは、Copilotからの提案をできるだけ残しています（あえてリファクタリングしていません）
-- タグ `chapXX` は、各章終了時点のコミットを指しています
+* [GitHub CopilotとのペアプロTDDでつくるローグライクRPG - いか小屋 - BOOTH](https://ikagoya.booth.pm/items/5372853)
 
 
 
 ## ゲームプレイ
+
+ゲームの最新ビルドは [https://nowsprinting.github.io/RoguelikeTDD/](https://nowsprinting.github.io/RoguelikeTDD/) でプレイできます。
 
 ### キーボード
 
@@ -30,9 +26,16 @@
 
 
 
-## 設計資料
+## 注意事項
 
-### プロジェクトの構造
+<!--- TextMesh Pro Essentialsをトラッキングから外しているので、最初に再生するときにインポートを促すウィンドウが出ます。それに従ってインストールしてください -->
+- プロダクトコードは、Copilotからの提案をできるだけ残しています（あえてリファクタリングしていません）
+- コメントは、Copilotからインライン候補が提示されたときの状態から追加していません。詳細は本文を参照してください
+- タグ `chapXX` は、各章終了時点のコミットを指しています
+
+
+
+## プロジェクトの構造
 
 ```
 Assets
@@ -56,6 +59,9 @@ Assets
             └── TestUtils   テストに使用する補助的なクラスなど
 ```
 
+
+
+## 設計資料
 
 ### 状態遷移図
 
