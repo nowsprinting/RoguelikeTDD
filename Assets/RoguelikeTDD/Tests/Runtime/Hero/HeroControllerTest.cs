@@ -18,6 +18,7 @@ namespace RoguelikeTDD.Hero
         [Test]
         [CreateScene(camera: true)]
         [TakeScreenshot]
+        [GameViewResolution(GameViewResolution.VGA)]
         public void Start_プレイヤーキャラクターが表示されること()
         {
             new GameObject().AddComponent<HeroController>();

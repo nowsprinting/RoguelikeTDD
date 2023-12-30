@@ -3,7 +3,6 @@
 
 using NUnit.Framework;
 using TestHelper.Attributes;
-using UnityEngine;
 
 namespace RoguelikeTDD.Dungeon
 {
@@ -13,6 +12,7 @@ namespace RoguelikeTDD.Dungeon
         [Test]
         [CreateScene(camera: true)]
         [TakeScreenshot]
+        [GameViewResolution(GameViewResolution.VGA)]
         public void CreateSprite_MapChipに応じたSpriteが表示されること([Values] MapChip mapChip)
         {
             mapChip.CreateSprite(0, 0);
@@ -21,6 +21,7 @@ namespace RoguelikeTDD.Dungeon
         [Test]
         [CreateScene(camera: true)]
         [TakeScreenshot]
+        [GameViewResolution(GameViewResolution.VGA)]
         public void Draw_MapChipの二次元配列に応じたSpriteが表示されること()
         {
             var map = new[]
