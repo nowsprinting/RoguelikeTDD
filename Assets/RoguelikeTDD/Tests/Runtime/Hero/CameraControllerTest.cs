@@ -17,7 +17,7 @@ namespace RoguelikeTDD.Hero
             // Arrange
             int targetX = 3, targetY = 2;
             var hero = new GameObject().AddComponent<HeroController>();
-            hero.GameState = new GameState(GameState.State.HeroIdol);
+            hero.GameState = new GameState(GameState.State.HeroIdle);
             var camera = new GameObject().AddComponent<CameraController>();
 
             // Act

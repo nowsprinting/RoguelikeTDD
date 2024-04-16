@@ -71,8 +71,8 @@ stateDiagram-v2
     direction LR
 
     [*] --> HeroIdol
-    HeroIdol --> HeroDoing
-    HeroDoing --> HeroIdol
+    HeroIdle --> HeroDoing
+    HeroDoing --> HeroIdle
 ```
 
 

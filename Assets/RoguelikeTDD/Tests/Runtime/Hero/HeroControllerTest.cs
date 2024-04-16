@@ -43,7 +43,7 @@ namespace RoguelikeTDD.Hero
                 {
                     var sut = new GameObject().AddComponent<HeroController>();
                     sut.Action = new HeroAction(X, Y) { Map = _map };
-                    sut.GameState = new GameState(GameState.State.HeroIdol);
+                    sut.GameState = new GameState(GameState.State.HeroIdle);
                     sut.Input = new StubInput { PushedKeys = new[] { key } };
                     await UniTask.NextFrame(PlayerLoopTiming.LastUpdate);
                     sut.Input = new StubInput();
@@ -63,7 +63,7 @@ namespace RoguelikeTDD.Hero
                 {
                     var sut = new GameObject().AddComponent<HeroController>();
                     sut.Action = new HeroAction(X, Y) { Map = _map };
-                    sut.GameState = new GameState(GameState.State.HeroIdol);
+                    sut.GameState = new GameState(GameState.State.HeroIdle);
                     sut.Input = new StubInput { PushedKeys = new[] { key } };
                     await UniTask.NextFrame(PlayerLoopTiming.LastUpdate);
                     sut.Input = new StubInput();
@@ -89,7 +89,7 @@ namespace RoguelikeTDD.Hero
                 {
                     var sut = new GameObject().AddComponent<HeroController>();
                     sut.Action = new HeroAction(X, Y) { Map = _map };
-                    sut.GameState = new GameState(GameState.State.HeroIdol);
+                    sut.GameState = new GameState(GameState.State.HeroIdle);
                     sut.Input = new StubInput { PushedKeys = new[] { key } };
                     await UniTask.NextFrame(PlayerLoopTiming.LastUpdate);
                     sut.Input = new StubInput();
@@ -109,12 +109,12 @@ namespace RoguelikeTDD.Hero
                 {
                     var sut = new GameObject().AddComponent<HeroController>();
                     sut.Action = new HeroAction(X, Y) { Map = _map };
-                    sut.GameState = new GameState(GameState.State.HeroIdol);
+                    sut.GameState = new GameState(GameState.State.HeroIdle);
                     sut.Input = new StubInput { PushedKeys = new[] { key } };
                     await UniTask.NextFrame(PlayerLoopTiming.LastUpdate);
                     sut.Input = new StubInput();
 
-                    Assert.That(sut.GameState.CurrentState, Is.EqualTo(GameState.State.HeroIdol));
+                    Assert.That(sut.GameState.CurrentState, Is.EqualTo(GameState.State.HeroIdle));
                 }
             }
         }
@@ -129,7 +129,7 @@ namespace RoguelikeTDD.Hero
                 var sut = new GameObject().AddComponent<HeroController>();
                 sut.GameState = new GameState(GameState.State.HeroDoing);
                 sut.Action = new HeroAction(targetX, targetY);
-                await sut.GameState.WaitState(GameState.State.HeroIdol); // HeroIdolに遷移するまで待つ
+                await sut.GameState.WaitState(GameState.State.HeroIdle); // HeroIdolに遷移するまで待つ
 
                 Assert.That(sut.transform.position, Is.EqualTo(new Vector3(targetX, targetY, 0)));
             }
