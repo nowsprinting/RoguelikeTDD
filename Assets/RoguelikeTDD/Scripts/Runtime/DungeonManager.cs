@@ -11,7 +11,7 @@ namespace RoguelikeTDD
     {
         private MapChip[][] _map;
 
-        private GameState _state = new GameState(GameState.State.HeroIdol);
+        private GameState _state = new GameState(GameState.State.HeroIdle);
         private HeroController _hero;
 
         private void Awake()

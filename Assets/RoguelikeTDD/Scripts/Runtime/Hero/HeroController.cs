@@ -37,7 +37,7 @@ namespace RoguelikeTDD.Hero
             transform.position = new Vector3(_position.x, -_position.y, 0);
         }
 
-        private void HeroIdol()
+        private void HeroIdle()
         {
             if (Input.GetKey(KeyCode.H))
             {
@@ -117,8 +117,8 @@ namespace RoguelikeTDD.Hero
         {
             switch (GameState?.CurrentState)
             {
-                case GameState.State.HeroIdol:
-                    HeroIdol();
+                case GameState.State.HeroIdle:
+                    HeroIdle();
                     break;
                 case GameState.State.HeroDoing:
                     HeroDoing();

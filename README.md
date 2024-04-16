@@ -32,6 +32,7 @@
 - プロダクトコードは、Copilotからの提案をできるだけ残しています（あえてリファクタリングしていません）
 - コメントは、Copilotからインライン候補が提示されたときの状態から追加していません。詳細は本文を参照してください
 - タグ `chapXX` は、各章終了時点のコミットを指しています
+- タグ `c103` は、コミックマーケット103で頒布したv1.0.0時点のコミットを指しています
 
 
 
@@ -69,9 +70,9 @@ Assets
 stateDiagram-v2
     direction LR
 
-    [*] --> HeroIdol
-    HeroIdol --> HeroDoing
-    HeroDoing --> HeroIdol
+    [*] --> HeroIdle
+    HeroIdle --> HeroDoing
+    HeroDoing --> HeroIdle
 ```
 
 

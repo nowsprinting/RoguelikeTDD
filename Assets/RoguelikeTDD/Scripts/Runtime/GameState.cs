@@ -7,11 +7,11 @@ namespace RoguelikeTDD
     {
         public enum State
         {
-            HeroIdol,
+            HeroIdle,
             HeroDoing,
         }
 
-        public State CurrentState { get; private set; } = State.HeroIdol;
+        public State CurrentState { get; private set; } = State.HeroIdle;
 
         public GameState()
         {
@@ -24,7 +24,7 @@ namespace RoguelikeTDD
 
         public void Next()
         {
-            CurrentState = CurrentState == State.HeroIdol ? State.HeroDoing : State.HeroIdol;
+            CurrentState = CurrentState == State.HeroIdle ? State.HeroDoing : State.HeroIdle;
         }
     }
 }
