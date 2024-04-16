@@ -70,7 +70,7 @@ Assets
 stateDiagram-v2
     direction LR
 
-    [*] --> HeroIdol
+    [*] --> HeroIdle
     HeroIdle --> HeroDoing
     HeroDoing --> HeroIdle
 ```
