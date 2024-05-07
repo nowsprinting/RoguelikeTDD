@@ -24,7 +24,7 @@ namespace RoguelikeTDD.Hero
             new GameObject().AddComponent<HeroController>();
         }
 
-        public class HeroIdol
+        public class HeroIdle
         {
             public class 移動可能なケース
             {
@@ -123,13 +123,13 @@ namespace RoguelikeTDD.Hero
         {
             [Test]
             [Timeout(5000)]
-            public async Task Update_HeroDoingのときHeroが移動かつHeroIdolに状態遷移すること()
+            public async Task Update_HeroDoingのときHeroが移動かつHeroIdleに状態遷移すること()
             {
                 int targetX = 1, targetY = 0;
                 var sut = new GameObject().AddComponent<HeroController>();
                 sut.GameState = new GameState(GameState.State.HeroDoing);
                 sut.Action = new HeroAction(targetX, targetY);
-                await sut.GameState.WaitState(GameState.State.HeroIdle); // HeroIdolに遷移するまで待つ
+                await sut.GameState.WaitState(GameState.State.HeroIdle); // HeroIdleに遷移するまで待つ
 
                 Assert.That(sut.transform.position, Is.EqualTo(new Vector3(targetX, targetY, 0)));
             }
