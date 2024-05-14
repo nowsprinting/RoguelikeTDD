@@ -23,4 +23,4 @@ jobs:
           submodules: false
           lfs: false
 
-      - uses: DeNA/unity-meta-check@v3
+      - uses: DeNA/unity-meta-check@v4
