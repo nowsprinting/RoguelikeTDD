@@ -34,9 +34,9 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: Library
-          key: Library-linux-${{ matrix.unityVersion }}-${{ github.ref }}
+          key: Library-linux-${{ env.unityVersion }}-${{ github.ref }}
           restore-keys: |
-            Library-linux-${{ matrix.unityVersion }}
+            Library-linux-${{ env.unityVersion }}
             Library-linux
             Library
 
