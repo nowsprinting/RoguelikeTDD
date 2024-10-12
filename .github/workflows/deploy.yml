@@ -23,7 +23,7 @@ jobs:
     permissions:
       contents: read
     env:
-      unityVersion: 2022.3.13f1
+      unityVersion: 2022.3.42f1
 
     steps:
       - uses: actions/checkout@v4
